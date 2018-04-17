@@ -4,7 +4,7 @@
  * This file was auto-generated from WSDL
  * by the Apache Axis2 version: 1.7.7  Built on : Nov 20, 2017 (11:41:20 GMT)
  */
-package org.apache.ws.axis2;
+package distancia;
 
 
 /**
@@ -39,12 +39,9 @@ public class DistanciaCuerpoCelesteMessageReceiverInOut extends org.apache.axis2
                     ((methodName = org.apache.axis2.util.JavaUtils.xmlNameToJavaIdentifier(
                             op.getName().getLocalPart())) != null)) {
                 if ("getDistancia".equals(methodName)) {
-                    org.apache.ws.axis2.GetDistanciaResponse getDistanciaResponse5 =
+                    distancia.GetDistanciaResponse getDistanciaResponse5 =
                         null;
-                    org.apache.ws.axis2.GetDistancia wrappedParam = (org.apache.ws.axis2.GetDistancia) fromOM(msgContext.getEnvelope()
-                                                                                                                        .getBody()
-                                                                                                                        .getFirstElement(),
-                            org.apache.ws.axis2.GetDistancia.class);
+                    distancia.GetDistancia wrappedParam = (distancia.GetDistancia) fromOM(msgContext.getEnvelope().getFirstElement(),distancia.GetDistancia.class);
 
                     getDistanciaResponse5 = skel.getDistancia(wrappedParam);
 
@@ -66,10 +63,10 @@ public class DistanciaCuerpoCelesteMessageReceiverInOut extends org.apache.axis2
 
     //
     private org.apache.axiom.om.OMElement toOM(
-        org.apache.ws.axis2.GetDistancia param, boolean optimizeContent)
+        distancia.GetDistancia param, boolean optimizeContent)
         throws org.apache.axis2.AxisFault {
         try {
-            return param.getOMElement(org.apache.ws.axis2.GetDistancia.MY_QNAME,
+            return param.getOMElement(distancia.GetDistancia.MY_QNAME,
                 org.apache.axiom.om.OMAbstractFactory.getOMFactory());
         } catch (org.apache.axis2.databinding.ADBException e) {
             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -77,10 +74,10 @@ public class DistanciaCuerpoCelesteMessageReceiverInOut extends org.apache.axis2
     }
 
     private org.apache.axiom.om.OMElement toOM(
-        org.apache.ws.axis2.GetDistanciaResponse param, boolean optimizeContent)
+        distancia.GetDistanciaResponse param, boolean optimizeContent)
         throws org.apache.axis2.AxisFault {
         try {
-            return param.getOMElement(org.apache.ws.axis2.GetDistanciaResponse.MY_QNAME,
+            return param.getOMElement(distancia.GetDistanciaResponse.MY_QNAME,
                 org.apache.axiom.om.OMAbstractFactory.getOMFactory());
         } catch (org.apache.axis2.databinding.ADBException e) {
             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -89,7 +86,7 @@ public class DistanciaCuerpoCelesteMessageReceiverInOut extends org.apache.axis2
 
     private org.apache.axiom.soap.SOAPEnvelope toEnvelope(
         org.apache.axiom.soap.SOAPFactory factory,
-        org.apache.ws.axis2.GetDistanciaResponse param,
+        distancia.GetDistanciaResponse param,
         boolean optimizeContent, javax.xml.namespace.QName elementQName)
         throws org.apache.axis2.AxisFault {
         try {
@@ -97,7 +94,7 @@ public class DistanciaCuerpoCelesteMessageReceiverInOut extends org.apache.axis2
 
             emptyEnvelope.getBody()
                          .addChild(param.getOMElement(
-                    org.apache.ws.axis2.GetDistanciaResponse.MY_QNAME, factory));
+                        		 distancia.GetDistanciaResponse.MY_QNAME, factory));
 
             return emptyEnvelope;
         } catch (org.apache.axis2.databinding.ADBException e) {
@@ -105,8 +102,8 @@ public class DistanciaCuerpoCelesteMessageReceiverInOut extends org.apache.axis2
         }
     }
 
-    private org.apache.ws.axis2.GetDistanciaResponse wrapgetDistancia() {
-        org.apache.ws.axis2.GetDistanciaResponse wrappedElement = new org.apache.ws.axis2.GetDistanciaResponse();
+    private distancia.GetDistanciaResponse wrapgetDistancia() {
+    	distancia.GetDistanciaResponse wrappedElement = new distancia.GetDistanciaResponse();
 
         return wrappedElement;
     }
@@ -122,12 +119,12 @@ public class DistanciaCuerpoCelesteMessageReceiverInOut extends org.apache.axis2
     private java.lang.Object fromOM(org.apache.axiom.om.OMElement param,
         java.lang.Class type) throws org.apache.axis2.AxisFault {
         try {
-            if (org.apache.ws.axis2.GetDistancia.class.equals(type)) {
-                return org.apache.ws.axis2.GetDistancia.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+            if (distancia.GetDistancia.class.equals(type)) {
+                return distancia.GetDistancia.Factory.parse(param.getXMLStreamReaderWithoutCaching());
             }
 
-            if (org.apache.ws.axis2.GetDistanciaResponse.class.equals(type)) {
-                return org.apache.ws.axis2.GetDistanciaResponse.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+            if (distancia.GetDistanciaResponse.class.equals(type)) {
+                return distancia.GetDistanciaResponse.Factory.parse(param.getXMLStreamReaderWithoutCaching());
             }
         } catch (java.lang.Exception e) {
             throw org.apache.axis2.AxisFault.makeFault(e);

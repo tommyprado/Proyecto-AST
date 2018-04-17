@@ -4,7 +4,7 @@
  * This file was auto-generated from WSDL
  * by the Apache Axis2 version: 1.7.7  Built on : Nov 20, 2017 (11:41:50 GMT)
  */
-package org.apache.ws.axis2;
+package distancia;
 
 
 /**
@@ -18,36 +18,36 @@ public class GetDistancia implements org.apache.axis2.databinding.ADBBean {
             "getDistancia", "ns1");
 
     /**
-     * field for Args0
+     * field for Cuerpo
      */
-    protected java.lang.String localArgs0;
+    protected java.lang.String localCuerpo;
 
     /*  This tracker boolean wil be used to detect whether the user called the set method
      *   for this attribute. It will be used to determine whether to include this field
      *   in the serialized XML
      */
-    protected boolean localArgs0Tracker = false;
+    protected boolean localCuerpoTracker = false;
 
-    public boolean isArgs0Specified() {
-        return localArgs0Tracker;
+    public boolean isCuerpoSpecified() {
+        return localCuerpoTracker;
     }
 
     /**
      * Auto generated getter method
      * @return java.lang.String
      */
-    public java.lang.String getArgs0() {
-        return localArgs0;
+    public java.lang.String getCuerpo() {
+        return localCuerpo;
     }
 
     /**
      * Auto generated setter method
-     * @param param Args0
+     * @param param Cuerpo
      */
-    public void setArgs0(java.lang.String param) {
-        localArgs0Tracker = true;
+    public void setCuerpo(java.lang.String param) {
+        localCuerpoTracker = true;
 
-        this.localArgs0 = param;
+        this.localCuerpo = param;
     }
 
     /**
@@ -99,17 +99,17 @@ public class GetDistancia implements org.apache.axis2.databinding.ADBBean {
             }
         }
 
-        if (localArgs0Tracker) {
+        if (localCuerpoTracker) {
             namespace = "http://ws.apache.org/axis2";
-            writeStartElement(null, namespace, "args0", xmlWriter);
+            writeStartElement(null, namespace, "Cuerpo", xmlWriter);
 
-            if (localArgs0 == null) {
+            if (localCuerpo == null) {
                 // write the nil attribute
                 writeAttribute("xsi",
                     "http://www.w3.org/2001/XMLSchema-instance", "nil", "1",
                     xmlWriter);
             } else {
-                xmlWriter.writeCharacters(localArgs0);
+                xmlWriter.writeCharacters(localCuerpo);
             }
 
             xmlWriter.writeEndElement();
@@ -372,7 +372,7 @@ public class GetDistancia implements org.apache.axis2.databinding.ADBBean {
                             java.lang.String nsUri = reader.getNamespaceContext()
                                                            .getNamespaceURI(nsPrefix);
 
-                            return (GetDistancia) org.apache.ws.axis2.ExtensionMapper.getTypeObject(nsUri,
+                            return (GetDistancia) distancia.ExtensionMapper.getTypeObject(nsUri,
                                 type, reader);
                         }
                     }
@@ -389,7 +389,7 @@ public class GetDistancia implements org.apache.axis2.databinding.ADBBean {
 
                 if (reader.isStartElement() &&
                         new javax.xml.namespace.QName(
-                            "http://ws.apache.org/axis2", "args0").equals(
+                            "http://ws.apache.org/axis2", "Cuerpo").equals(
                             reader.getName())) {
                     nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance",
                             "nil");
@@ -398,7 +398,7 @@ public class GetDistancia implements org.apache.axis2.databinding.ADBBean {
                             !"1".equals(nillableValue)) {
                         java.lang.String content = reader.getElementText();
 
-                        object.setArgs0(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(
+                        object.setCuerpo(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(
                                 content));
                     } else {
                         reader.getElementText(); // throw away text nodes if any.
